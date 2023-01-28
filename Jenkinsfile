@@ -6,7 +6,7 @@ pipeline {
         stage('Bild Docker Image') {
             steps {
                 script{
-                    dockerapp = docker.build("arleando/kube-news:${env.BUILD_ID}", '-f ./Dockerfile ./src')
+                    dockerapp = docker.build("arleando/kube-news:${env.BUILD_ID}", '-f ./src/Dockerfile ./src')
                 }
             }
         }
